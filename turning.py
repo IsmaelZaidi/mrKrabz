@@ -43,15 +43,15 @@ def turn_45(kit, kit2):
     time.sleep(1)
 
     # turn with set 2
-    kit.servo[5].angle = 45
+   # kit.servo[5].angle = 45
     kit.servo[8].angle = 135
     kit2.servo[2].angle = 45
     time.sleep(1)
 
     # put set1 down
-    kit.servo[2].angle = 135
-    kit.servo[14].angle = 135
-    kit.servo[11].angle = 45
+ #   kit.servo[2].angle = 135
+  #  kit.servo[14].angle = 135
+   # kit.servo[11].angle = 45
     time.sleep(1)
     kit.servo[1].angle = 90
     kit.servo[13].angle = 90
@@ -62,9 +62,9 @@ def turn_45(kit, kit2):
     kit.servo[7].angle = 60
     kit2.servo[1].angle = 120
     time.sleep(1)
-    kit.servo[5].angle = 135
-    kit.servo[7].angle = 45
-    kit2.servo[2].angle = 135
+    #kit.servo[5].angle = 90
+    kit.servo[8].angle = 90
+    kit2.servo[2].angle = 90
     time.sleep(1)
     kit.servo[4].angle = 90
     kit.servo[7].angle = 90
