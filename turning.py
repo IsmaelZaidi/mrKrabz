@@ -13,10 +13,14 @@ import time
 def initialize_servos(kit, kit2):
     for i in range(16):
         kit.servo[i].angle = 90
-    for i in range(2):
+    for i in range(3):
         kit2.servo[i].angle = 90
     
-
+def loose_servos(kit, kit2):
+    for i in range(16):
+        kit.servo[i].angle = None
+    for i in range(3):
+        kit2.servo[i].angle = None
 
 def move_leg(i):
 
@@ -68,9 +72,10 @@ def turn_45(kit, kit2):
 
 
 kit = ServoKit(channels=16)
-kit2 = ServoKit(channels=16, addres=0x50)
+kit2 = ServoKit(channels=16, address=0x50)
 initialize_servos(kit, kit2)
 
 
 turn_45(kit, kit2)
 
+loose_servos(kit, kit2)
