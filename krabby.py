@@ -32,7 +32,7 @@ def main():
         # Set specific angles for servos on kit2
         kit2.servo[0].angle = 90
         kit2.servo[1].angle = 90
-        kit2.servo[2].angle = 0
+        kit2.servo[2].angle = 90
 
         # Add any additional operations or delays here
 
