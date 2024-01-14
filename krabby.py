@@ -10,10 +10,29 @@ def initialize_servo_kits(channels_per_kit=16, kit1_address=None, kit2_address=N
 
     return kit1, kit2
 
-def move_servos():
+def move_servos(kit, channel, angle):
+    # Move a specific servo to a specified angle
+    kit.servo[channel].angle = angle
+    time.sleep(0.1)  # Add a delay for the servo to reach the position
 
+def forward_movement(kit1, kit2):
+    # Define the channels for the femur and tibia of each leg
+    leg_channels = [(1, 2), (4, 5), (7, 8), (10, 11), (13, 14), (16, 17)]  # Update these as per your setup
 
-def forward_movement():
+    # Move each leg
+    for femur_channel, tibia_channel in leg_channels:
+        # Lift the leg
+        move_servos(kit1, femur_channel, 130) 
+        time.sleep(0.5)
+        # Move forward
+        move_servos(kit1, tibia_channel, 45)
+        time.sleep(0.5)
+        # Move leg back down
+        move_servos(kit1, femur_channel, 90) 
+        time.sleep(0.5)
+        # Move shoulder back to 90 degrees
+        move_servos(kit1, tibia_channel, 90)
+        time.sleep(0.5)
 
 
 def main():
@@ -35,6 +54,8 @@ def main():
         kit2.servo[2].angle = 90
 
         # Add any additional operations or delays here
+        time.sleep(5)
+        forward_movement(kit1, kit2)
 
     finally:
         # Release resources
