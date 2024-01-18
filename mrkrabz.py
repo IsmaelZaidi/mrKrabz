@@ -27,3 +27,14 @@ class MrKrabz:
         channel = self.legs[leg_name][part_name]
         self.kits[kit_name].servo[channel].angle = angle
         time.sleep(0.1)  # Add a delay for the servo to reach the position
+
+    def main():
+        mrkrabz = MrKrabz()
+
+        # Test leg1
+        mrkrabz.move("leg1", "coxa", 90)    # Move coxa to 90 degrees 
+        mrkrabz.move("leg1", "femur", 130)
+        mrkrabz.move("leg1", "tibia", 45)
+
+if __name__ == "__main__":
+    main()            
