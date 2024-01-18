@@ -8,7 +8,7 @@ class MrKrabz:
             "leg1": {"kit": "kit1", "coxa": 0, "femur": 1, "tibia": 2},
             "leg2": {"kit": "kit1", "coxa": 3, "femur": 4, "tibia": 5},
             "leg3": {"kit": "kit1", "coxa": 6, "femur": 7, "tibia": 8},
-            "leg4": {"kit": "kit1", "coxa": 9, "femur": 10g, "tibia": 11},
+            "leg4": {"kit": "kit1", "coxa": 9, "femur": 10, "tibia": 11},
             "leg5": {"kit": "kit1", "coxa": 12, "femur": 13, "tibia": 14},
             "leg6": {"kit": "kit2", "coxa": 0, "femur": 1, "tibia": 2},
         }
