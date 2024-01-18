@@ -31,6 +31,11 @@ class MrKrabz:
 def main():
     mrkrabz = MrKrabz()
 
+    # Put all angles for every leg at 90 degrees
+    for leg_name in mrkrabz.legs:
+        for part_name in ["coxa", "femur", "tibia"]:
+            mrkrabz.move(leg_name, part_name, 90)
+
     # Lift leg 1, 3 and 5 up
     mrkrabz.move("leg1", "femur", 130)
     mrkrabz.move("leg3", "femur", 130)
