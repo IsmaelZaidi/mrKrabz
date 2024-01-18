@@ -31,10 +31,11 @@ class MrKrabz:
 def main():
     mrkrabz = MrKrabz()
 
-    # Test leg1
-    mrkrabz.move("leg1", "coxa", 90)    # Move coxa to 90 degrees 
+    # Lift leg 1, 3 and 5 up
     mrkrabz.move("leg1", "femur", 130)
-    mrkrabz.move("leg1", "tibia", 45)
+    mrkrabz.move("leg3", "femur", 130)
+    mrkrabz.move("leg5", "femur", 130)
+
 
 if __name__ == "__main__":
     main()            
